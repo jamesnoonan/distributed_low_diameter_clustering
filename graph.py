@@ -4,12 +4,11 @@ from enum import Enum
 NodeColor = Enum('NodeColor', ['RED', 'BLUE', 'NONE'])
 
 class Node:
-  def __init__(self, node_id: int, adjacent_nodes: list[int] = [], color: NodeColor = NodeColor.NONE, parent: int = None, deleted: bool = False):
+  def __init__(self, node_id: int, adjacent_nodes: list[int] = [], parent: int = None, deleted: bool = False):
     self.og_id = node_id
     self.id = node_id
     self.adjacent_nodes = adjacent_nodes
     
-    self.color = color
     self.parent = parent # None if it is a terminal
     self.deleted = deleted
 
